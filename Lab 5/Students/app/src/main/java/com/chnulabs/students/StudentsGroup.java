@@ -10,9 +10,8 @@ public class StudentsGroup {
     private boolean contractExistFlg;
     private boolean privilageExistFlg;
 
-
     public StudentsGroup(String number,String facultyName,int educationLevel,
-                         boolean contractExistFlg, boolean privilageExistFlg){
+    boolean contractExistFlg, boolean privilageExistFlg){
         this.number=number;
         this.facultyName=facultyName;
         this.educationLevel=educationLevel;
@@ -28,22 +27,31 @@ public class StudentsGroup {
     public int getEducationLevel(){return educationLevel;}
     public boolean isContractExistFlg(){return contractExistFlg;}
     public boolean isPrivilageExistFlg(){return  privilageExistFlg;}
-    private final static ArrayList<StudentsGroup> group = new ArrayList<StudentsGroup>(
+    private static ArrayList<StudentsGroup> groups = new ArrayList<StudentsGroup>(
             Arrays.asList(
                     new StudentsGroup("301","Комп'ютерних наук",0,true,false),
-                    new StudentsGroup("302","Комп'ютерних наук",0,true,false),
+//                    new StudentsGroup("302","Комп'ютерних наук",0,true,false),
                     new StudentsGroup("308","Комп'ютерних наук",0,true,true),
                     new StudentsGroup("309","Комп'ютерних наук",0,true,false),
                     new StudentsGroup("501m","Комп'ютерних наук",1,false,false)
 
-            )
+            )      
     );
     public static StudentsGroup getGroup(String groupNumber){
-        for(StudentsGroup g:group){
-            if(g.getNumber().equals(groupNumber)){
-                return g;
-            }
+        for(StudentsGroup g:groups){
+          if(g.getNumber().equals(groupNumber)){
+              return g;
+          }
         }
         return null;
     }
+    public static ArrayList<StudentsGroup> getGroups(){
+        return groups;
+    }
+    @Override
+    public String toString(){
+        return number;
+    }
+
+    public static void addGroup(StudentsGroup group){groups.add(group);}
 }

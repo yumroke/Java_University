@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 
 public class StudentsGroupActivity extends AppCompatActivity {
+
     public static final String GROUP_NUMBER="groupnumber";
 
     @Override
@@ -24,8 +25,8 @@ public class StudentsGroupActivity extends AppCompatActivity {
         String grpNumber = intent.getStringExtra(GROUP_NUMBER);
         StudentsGroup group = StudentsGroup.getGroup(grpNumber);
 
-        EditText txtGrpNumber = (EditText) findViewById(R.id.grpNumberEdit);
-        txtGrpNumber.setText(group.getNumber());
+       EditText txtGrpNumber = (EditText) findViewById(R.id.grpNumberEdit);
+       txtGrpNumber.setText(group.getNumber());
 
         EditText txtFaculty = (EditText) findViewById(R.id.facultyEdit);
         txtFaculty.setText(group.getFacultyName());
@@ -70,5 +71,13 @@ public class StudentsGroupActivity extends AppCompatActivity {
             outStirng += "пільговиків нема\n";
         }
         Toast.makeText(this,outStirng, Toast.LENGTH_LONG).show();
+    }
+    public void onBtnStudListClick(View view){
+        Intent localIntent= getIntent();
+        String group = localIntent.getStringExtra(GROUP_NUMBER);
+
+        Intent newIntent = new Intent(this, StudentsListActivity.class);
+        newIntent.putExtra(StudentsListActivity.GROUP_NUMBER, group);
+        startActivity(newIntent);
     }
 }

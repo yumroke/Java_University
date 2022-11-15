@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android/Students/app/src/main/res/layout/activity_main.xml" value="0.27717391304347827" />
-        <entry key="..\:/Android/Students/app/src/main/res/layout/activity_students_group.xml" value="0.33" />
-        <entry key="..\:/Android/Students/app/src/main/res/layout/activity_students_group2.xml" value="0.33" />
-        <entry key="..\:/Android/Students/app/src/main/res/layout/activity_students_list.xml" value="0.2798913043478261" />
+        <entry key="..\:/AndroidStudioProjects/Students/app/src/main/res/layout/activity_add_students_group.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudioProjects/Students/app/src/main/res/layout/activity_groups_list.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/Students/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/Students/app/src/main/res/layout/activity_students_group.xml" value="0.1901792673421668" />
+        <entry key="..\:/AndroidStudioProjects/Students/app/src/main/res/layout/activity_students_group2.xml" value="0.2546972860125261" />
+        <entry key="..\:/AndroidStudioProjects/Students/app/src/main/res/layout/activity_students_group3.xml" value="0.4" />
+        <entry key="..\:/AndroidStudioProjects/Students/app/src/main/res/layout/activity_students_list.xml" value="0.1897644927536232" />
+        <entry key="..\:/AndroidStudioProjects/Students/app/src/main/res/menu/group_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
@@ -15,12 +19,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.33" />
-      </ProjectState>
-    </option>
   </component>
 </project>

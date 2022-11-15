@@ -1,5 +1,4 @@
 package com.chnulabs.students;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -17,26 +16,30 @@ public class Student {
     public String getGroupNumber(){
         return groupNumber;
     }
-    private  final static ArrayList<Student> students=new ArrayList<Student>(
+    private final static ArrayList<Student> students= new ArrayList<Student>(
             Arrays.asList(
-                    new Student("Сурков Ігор","301"),
-                    new Student("Шевченко Данило","301"),
-                    new Student("Фаріон Іван","301"),
-                    new Student("Таран Максим","301"),
-                    new Student("Іван Іванов","302"),
-                    new Student("Васильєв Максим","302"),
-                    new Student("Смірнов Кирило","308"),
-                    new Student("Петренко Семен","309")
+               new Student("Калачов Євген","301"),
+               new Student("Мартинова Ганна","301"),
+               new Student("Сергєєва Поліна","302"),
+               new Student("Білоусова Надія","302"),
+               new Student("Тарасов Дмитро","308"),
+               new Student("Соколов Олександр","308"),
+               new Student("Скворцова Марія","309"),
+               new Student("Агєєва Аліна","309")
             )
     );
-
-    public static ArrayList<Student> getStudents(String groupNumber) {
-        ArrayList<Student> stList=new ArrayList<>();
-        for (Student s:students){
-            if (s.getGroupNumber().equals(groupNumber)){
+    public static ArrayList<Student> getStudents(String groupNumber){
+        ArrayList<Student> stList = new ArrayList<>();
+        for (Student s: students){
+            if(s.getGroupNumber().equals(groupNumber)){
                 stList.add(s);
             }
         }
         return stList;
     }
+    @Override
+    public String toString(){
+        return name;
+    }
+
 }
